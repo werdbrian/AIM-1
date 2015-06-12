@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F5D0C5E-5809-412A-BCDE-747A5521110A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AIM</RootNamespace>
+    <AssemblyName>AIM</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PreBuildEvent />
+    <OutputPath>bin\Release</OutputPath>
+    <TargetFrameworkProfile />
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BehaviorSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\LeagueSharp\System\BehaviorSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="clipper_library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\LeagueSharp\System\clipper_library.dll</HintPath>
+    </Reference>
+    <Reference Include="LeagueSharp, Version=1.0.0.25, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\LeagueSharp\System\LeagueSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LeagueSharp.Common, Version=1.0.0.26, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\LeagueSharp\System\LeagueSharp.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\LeagueSharp\System\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autoplay\Behaviors\MainBehavior.cs" />
+    <Compile Include="Autoplay\Behaviors\Strategy\Positioning\Geometry.cs" />
+    <Compile Include="Autoplay\Behaviors\Strategy\Positioning\Laning.cs" />
+    <Compile Include="Autoplay\Behaviors\Strategy\Positioning\Teamfight.cs" />
+    <Compile Include="Autoplay\Behaviors\Strategy\Positioning\Util.cs" />
+    <Compile Include="Autoplay\Behaviors\Strategy\Actions.cs" />
+    <Compile Include="Autoplay\Behaviors\Strategy\Conditionals.cs" />
+    <Compile Include="Autoplay\Behaviors\Strategy\Inverters.cs" />
+    <Compile Include="Autoplay\Behaviors\Strategy\Sequences.cs" />
+    <Compile Include="Autoplay\Load.cs" />
+    <Compile Include="Autoplay\Modes\Base.cs" />
+    <Compile Include="Autoplay\Modes\Carry.cs" />
+    <Compile Include="Autoplay\Modes\Support.cs" />
+    <Compile Include="Autoplay\Util\Data\Constants.cs" />
+    <Compile Include="Autoplay\Util\Data\Randoms.cs" />
+    <Compile Include="Autoplay\Util\Data\State.cs" />
+    <Compile Include="Autoplay\Util\Data\Variables.cs" />
+    <Compile Include="Autoplay\Util\Helpers\MetaHandler.cs" />
+    <Compile Include="Autoplay\Util\Helpers\FileHandler.cs" />
+    <Compile Include="Autoplay\Util\Data\AutoLevel.cs" />
+    <Compile Include="Autoplay\Util\Objects\Heroes.cs" />
+    <Compile Include="Autoplay\Util\Objects\HQ.cs" />
+    <Compile Include="Autoplay\Util\Objects\Minions.cs" />
+    <Compile Include="Autoplay\Util\Objects\Relics.cs" />
+    <Compile Include="Autoplay\Util\Objects\Turrets.cs" />
+    <Compile Include="Autoplay\Util\Orbwalker.cs" />
+    <Compile Include="PluginLoader.cs" />
+    <Compile Include="Plugins\Aatrox.cs" />
+    <Compile Include="Plugins\Ahri.cs" />
+    <Compile Include="Plugins\Akali.cs" />
+    <Compile Include="Plugins\Anivia.cs" />
+    <Compile Include="Plugins\Bard.cs" />
+    <Compile Include="Plugins\Brand.cs" />
+    <Compile Include="Plugins\Caitlyn.cs" />
+    <Compile Include="Plugins\Cassiopeia.cs" />
+    <Compile Include="Plugins\Chogath.cs" />
+    <Compile Include="Plugins\Corki.cs" />
+    <Compile Include="Plugins\Darius.cs" />
+    <Compile Include="Plugins\Diana.cs" />
+    <Compile Include="Plugins\Draven.cs" />
+    <Compile Include="Plugins\Evelynn.cs" />
+    <Compile Include="Plugins\Fiora.cs" />
+    <Compile Include="Plugins\Fizz.cs" />
+    <Compile Include="Plugins\Galio.cs" />
+    <Compile Include="Plugins\Gangplank.cs" />
+    <Compile Include="Plugins\Garen.cs" />
+    <Compile Include="Plugins\Gragas.cs" />
+    <Compile Include="Plugins\Graves.cs" />
+    <Compile Include="Plugins\Heimerdinger.cs" />
+    <Compile Include="Plugins\Irelia.cs" />
+    <Compile Include="Plugins\Karthus.cs" />
+    <Compile Include="Plugins\Kogmaw.cs" />
+    <Compile Include="Plugins\Leblanc.cs" />
+    <Compile Include="Plugins\Malzahar.cs" />
+    <Compile Include="Plugins\Poppy.cs" />
+    <Compile Include="Plugins\Riven.cs" />
+    <Compile Include="Plugins\Sivir.cs" />
+    <Compile Include="Plugins\Skarner.cs" />
+    <Compile Include="Plugins\Amumu.cs" />
+    <Compile Include="Plugins\Ashe.cs" />
+    <Compile Include="Plugins\Default.cs" />
+    <Compile Include="Plugins\Ezreal.cs" />
+    <Compile Include="Plugins\Teemo.cs" />
+    <Compile Include="Plugins\Tristana.cs" />
+    <Compile Include="Plugins\Vayne.cs" />
+    <Compile Include="Plugins\Veigar.cs" />
+    <Compile Include="Util\AntiGapcloser.cs" />
+    <Compile Include="Util\AutoBushRevealer.cs" />
+    <Compile Include="Util\AutoPot.cs" />
+    <Compile Include="Util\DamageBoostDatabase.cs" />
+    <Compile Include="Plugins\Nunu.cs" />
+    <Compile Include="Util\Extensions.cs" />
+    <Compile Include="Plugins\Annie.cs" />
+    <Compile Include="Plugins\Alistar.cs" />
+    <Compile Include="Plugins\Blitzcrank.cs" />
+    <Compile Include="Plugins\Braum.cs" />
+    <Compile Include="Plugins\FiddleSticks.cs" />
+    <Compile Include="Plugins\Morgana.cs" />
+    <Compile Include="Plugins\Nami.cs" />
+    <Compile Include="PluginBase.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Plugins\Sona.cs" />
+    <Compile Include="Plugins\Taric.cs" />
+    <Compile Include="Plugins\Thresh.cs" />
+    <Compile Include="Util\Helpers.cs" />
+    <Compile Include="Plugins\Zilean.cs" />
+    <Compile Include="Plugins\Zyra.cs" />
+    <Compile Include="Plugins\Shaco.cs" />
+    <Compile Include="Plugins\Soraka.cs" />
+    <Compile Include="Plugins\Lulu.cs" />
+    <Compile Include="Plugins\Kayle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Autoplay\Builds\Aatrox.json" />
+    <None Include="Autoplay\Builds\Ahri.json" />
+    <None Include="Autoplay\Builds\Akali.json" />
+    <None Include="Autoplay\Builds\Alistar.json" />
+    <None Include="Autoplay\Builds\Amumu.json" />
+    <None Include="Autoplay\Builds\Anivia.json" />
+    <None Include="Autoplay\Builds\Annie.json" />
+    <None Include="Autoplay\Builds\Ashe.json" />
+    <None Include="Autoplay\Builds\Azir.json" />
+    <None Include="Autoplay\Builds\Bard.json" />
+    <None Include="Autoplay\Builds\Blitzcrank.json" />
+    <None Include="Autoplay\Builds\Brand.json" />
+    <None Include="Autoplay\Builds\Braum.json" />
+    <None Include="Autoplay\Builds\Caitlyn.json" />
+    <None Include="Autoplay\Builds\Cassiopeia.json" />
+    <None Include="Autoplay\Builds\Chogath.json" />
+    <None Include="Autoplay\Builds\Corki.json" />
+    <None Include="Autoplay\Builds\Darius.json" />
+    <None Include="Autoplay\Builds\Diana.json" />
+    <None Include="Autoplay\Builds\Draven.json" />
+    <None Include="Autoplay\Builds\DrMundo.json" />
+    <None Include="Autoplay\Builds\Ekko.json" />
+    <None Include="Autoplay\Builds\Elise.json" />
+    <None Include="Autoplay\Builds\Evelynn.json" />
+    <None Include="Autoplay\Builds\Ezreal.json" />
+    <None Include="Autoplay\Builds\FiddleSticks.json" />
+    <None Include="Autoplay\Builds\Fiora.json" />
+    <None Include="Autoplay\Builds\Fizz.json" />
+    <None Include="Autoplay\Builds\Galio.json" />
+    <None Include="Autoplay\Builds\Gangplank.json" />
+    <None Include="Autoplay\Builds\Garen.json" />
+    <None Include="Autoplay\Builds\Gnar.json" />
+    <None Include="Autoplay\Builds\Gragas.json" />
+    <None Include="Autoplay\Builds\Graves.json" />
+    <None Include="Autoplay\Builds\Hecarim.json" />
+    <None Include="Autoplay\Builds\Heimerdinger.json" />
+    <None Include="Autoplay\Builds\Irelia.json" />
+    <None Include="Autoplay\Builds\Janna.json" />
+    <None Include="Autoplay\Builds\JarvanIV.json" />
+    <None Include="Autoplay\Builds\Jax.json" />
+    <None Include="Autoplay\Builds\Jayce.json" />
+    <None Include="Autoplay\Builds\Jinx.json" />
+    <None Include="Autoplay\Builds\Kalista.json" />
+    <None Include="Autoplay\Builds\Karma.json" />
+    <None Include="Autoplay\Builds\Karthus.json" />
+    <None Include="Autoplay\Builds\Kassadin.json" />
+    <None Include="Autoplay\Builds\Katarina.json" />
+    <None Include="Autoplay\Builds\Kayle.json" />
+    <None Include="Autoplay\Builds\Kennen.json" />
+    <None Include="Autoplay\Builds\Khazix.json" />
+    <None Include="Autoplay\Builds\KogMaw.json" />
+    <None Include="Autoplay\Builds\Leblanc.json" />
+    <None Include="Autoplay\Builds\LeeSin.json" />
+    <None Include="Autoplay\Builds\Leona.json" />
+    <None Include="Autoplay\Builds\Lissandra.json" />
+    <None Include="Autoplay\Builds\Lucian.json" />
+    <None Include="Autoplay\Builds\Lulu.json" />
+    <None Include="Autoplay\Builds\Lux.json" />
+    <None Include="Autoplay\Builds\Malphite.json" />
+    <None Include="Autoplay\Builds\Malzahar.json" />
+    <None Include="Autoplay\Builds\Maokai.json" />
+    <None Include="Autoplay\Builds\MasterYi.json" />
+    <None Include="Autoplay\Builds\MissFortune.json" />
+    <None Include="Autoplay\Builds\MonkeyKing.json" />
+    <None Include="Autoplay\Builds\Mordekaiser.json" />
+    <None Include="Autoplay\Builds\Morgana.json" />
+    <None Include="Autoplay\Builds\Nami.json" />
+    <None Include="Autoplay\Builds\Nasus.json" />
+    <None Include="Autoplay\Builds\Nautilus.json" />
+    <None Include="Autoplay\Builds\Nidalee.json" />
+    <None Include="Autoplay\Builds\Nocturne.json" />
+    <None Include="Autoplay\Builds\Nunu.json" />
+    <None Include="Autoplay\Builds\Olaf.json" />
+    <None Include="Autoplay\Builds\Orianna.json" />
+    <None Include="Autoplay\Builds\Pantheon.json" />
+    <None Include="Autoplay\Builds\Poppy.json" />
+    <None Include="Autoplay\Builds\Quinn.json" />
+    <None Include="Autoplay\Builds\Rammus.json" />
+    <None Include="Autoplay\Builds\RekSai.json" />
+    <None Include="Autoplay\Builds\Renekton.json" />
+    <None Include="Autoplay\Builds\Rengar.json" />
+    <None Include="Autoplay\Builds\Riven.json" />
+    <None Include="Autoplay\Builds\Rumble.json" />
+    <None Include="Autoplay\Builds\Ryze.json" />
+    <None Include="Autoplay\Builds\Sejuani.json" />
+    <None Include="Autoplay\Builds\Shaco.json" />
+    <None Include="Autoplay\Builds\Shen.json" />
+    <None Include="Autoplay\Builds\Shyvana.json" />
+    <None Include="Autoplay\Builds\Singed.json" />
+    <None Include="Autoplay\Builds\Sion.json" />
+    <None Include="Autoplay\Builds\Sivir.json" />
+    <None Include="Autoplay\Builds\Skarner.json" />
+    <None Include="Autoplay\Builds\Sona.json" />
+    <None Include="Autoplay\Builds\Soraka.json" />
+    <None Include="Autoplay\Builds\Swain.json" />
+    <None Include="Autoplay\Builds\Syndra.json" />
+    <None Include="Autoplay\Builds\Talon.json" />
+    <None Include="Autoplay\Builds\Taric.json" />
+    <None Include="Autoplay\Builds\Teemo.json" />
+    <None Include="Autoplay\Builds\Thresh.json" />
+    <None Include="Autoplay\Builds\Tristana.json" />
+    <None Include="Autoplay\Builds\Trundle.json" />
+    <None Include="Autoplay\Builds\Tryndamere.json" />
+    <None Include="Autoplay\Builds\TwistedFate.json" />
+    <None Include="Autoplay\Builds\Twitch.json" />
+    <None Include="Autoplay\Builds\Udyr.json" />
+    <None Include="Autoplay\Builds\Urgot.json" />
+    <None Include="Autoplay\Builds\Varus.json" />
+    <None Include="Autoplay\Builds\Vayne.json" />
+    <None Include="Autoplay\Builds\Veigar.json" />
+    <None Include="Autoplay\Builds\Velkoz.json" />
+    <None Include="Autoplay\Builds\Vi.json" />
+    <None Include="Autoplay\Builds\Viktor.json" />
+    <None Include="Autoplay\Builds\Vladimir.json" />
+    <None Include="Autoplay\Builds\Volibear.json" />
+    <None Include="Autoplay\Builds\Warwick.json" />
+    <None Include="Autoplay\Builds\Xerath.json" />
+    <None Include="Autoplay\Builds\XinZhao.json" />
+    <None Include="Autoplay\Builds\Yasuo.json" />
+    <None Include="Autoplay\Builds\Yorick.json" />
+    <None Include="Autoplay\Builds\Zac.json" />
+    <None Include="Autoplay\Builds\Zed.json" />
+    <None Include="Autoplay\Builds\Ziggs.json" />
+    <None Include="Autoplay\Builds\Zilean.json" />
+    <None Include="Autoplay\Builds\Zyra.json" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
