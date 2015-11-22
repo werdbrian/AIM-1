@@ -39,19 +39,14 @@ namespace AIM.Plugins
 
 		public override void OnUpdate(EventArgs args)
 		{
-			var target1 = TargetSelector.GetTarget(E.Range, TargetSelector.DamageType.Magical);
+			var target1 = TargetSelector.GetTarget(1200, TargetSelector.DamageType.Magical);
 			if (target1==null) return;
 			if (ComboMode)
 			{
 				
 					Q.Cast(target1);
-				
-
-				if ( Player.HealthPercent > 30 && Player.CountEnemiesInRange(3000) > 0)
-				{
 					E.Cast();
 					Player.IssueOrder(GameObjectOrder.AttackUnit, target1);
-				}
 
 				if (Player.HealthPercent < 50)
 				{
