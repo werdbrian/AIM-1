@@ -12,7 +12,7 @@ namespace AIM.Plugins
 			//Spell
             Q = new Spell(SpellSlot.Q, 625);
 			W = new Spell(SpellSlot.W);
-			E = new Spell(SpellSlot.E);
+			E = new Spell(SpellSlot.E, 950);
 			R = new Spell(SpellSlot.R, 25000);
 		}
 
